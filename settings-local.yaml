@@ -5,7 +5,7 @@ server:
 llm:
   mode: llamacpp
   # Should be matching the selected model
-  max_new_tokens: 512
+  max_new_tokens: 300
   context_window: 3900
   tokenizer: meta-llama/Meta-Llama-3.1-8B-Instruct
   prompt_style: "llama3"

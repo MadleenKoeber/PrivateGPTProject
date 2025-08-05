@@ -53,7 +53,7 @@ llm:
   mode: llamacpp
   prompt_style: "mistral"
   # Should be matching the selected model
-  max_new_tokens: 512
+  max_new_tokens: 300
   context_window: 3900
   # Select your tokenizer. Llama-index tokenizer is the default.
   # tokenizer: meta-llama/Meta-Llama-3.1-8B-Instruct

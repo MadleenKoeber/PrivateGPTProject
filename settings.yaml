@@ -92,9 +92,9 @@ llamacpp:
 
 embedding:
   # Should be matching the value above in most cases
-  mode: ollama
+  mode: huggingface
   ingest_mode: simple
-  embed_dim: 1024 #768 is for nomic-ai/nomic-embed-text-v1.5
+  embed_dim: 768 #768 is for nomic-ai/nomic-embed-text-v1.5
 
 huggingface:
   embedding_hf_model_name: nomic-ai/nomic-embed-text-v1.5
@@ -115,7 +115,6 @@ milvus:
   overwrite: false
 
 qdrant:
-  collection_name: private_gpt
   path: local_data/private_gpt/qdrant
 
 postgres:

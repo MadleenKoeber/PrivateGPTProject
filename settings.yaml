@@ -50,15 +50,15 @@ ui:
   delete_all_files_button_enabled: true
 
 llm:
-  mode: llamacpp
-  prompt_style: "mistral"
+  mode: ollama
+  prompt_style: "default"
   # Should be matching the selected model
   max_new_tokens: 300
   context_window: 3900
   # Select your tokenizer. Llama-index tokenizer is the default.
   # tokenizer: meta-llama/Meta-Llama-3.1-8B-Instruct
   temperature: 0.1      # The temperature of the model. Increasing the temperature will make the model answer more creatively. A value of 0.1 would be more factual. (Default: 0.1)
-  model_path: C:/PrivateGPTProject/models/mistral-7b-instruct-v0.1.Q4_K_M.gguf
+  #model_path: C:/PrivateGPTProject/models/mistral-7b-instruct-v0.1.Q4_K_M.gguf
   gpu_layers: 50
 
 
@@ -92,9 +92,9 @@ llamacpp:
 
 embedding:
   # Should be matching the value above in most cases
-  mode: huggingface
+  mode: ollama
   ingest_mode: simple
-  embed_dim: 768 # 768 is for nomic-ai/nomic-embed-text-v1.5
+  embed_dim: 1024 #768 is for nomic-ai/nomic-embed-text-v1.5
 
 huggingface:
   embedding_hf_model_name: nomic-ai/nomic-embed-text-v1.5
@@ -115,6 +115,7 @@ milvus:
   overwrite: false
 
 qdrant:
+  collection_name: private_gpt
   path: local_data/private_gpt/qdrant
 
 postgres:
@@ -135,8 +136,8 @@ openai:
   embedding_api_key: ${OPENAI_API_KEY:}
 
 ollama:
-  llm_model: llama3.1
-  embedding_model: nomic-embed-text
+  llm_model: qwen3:8b
+  embedding_model: qwen3:0.6b
   api_base: http://localhost:11434
   embedding_api_base: http://localhost:11434  # change if your embedding model runs on another ollama
   keep_alive: 5m

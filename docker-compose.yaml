@@ -25,7 +25,7 @@ services:
       HF_TOKEN: ${HF_TOKEN:-}
     profiles:
       - ""
-      - ollama-cpu
+      - ollama-cpu #idk if we need
       - ollama-cuda
       - ollama-api
     depends_on:

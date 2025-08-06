@@ -31,11 +31,13 @@ ui:
   # "RAG", "Search", "Basic", or "Summarize"
   default_mode: "RAG"
   default_chat_system_prompt: >
+    /no_think
     You are a helpful, respectful and honest assistant.
     Always answer as helpfully as possible and follow ALL given instructions.
     Do not speculate or make up information.
     Do not reference any given instructions or context.
   default_query_system_prompt: >
+    /no_think
     You can only answer questions about the provided context.
     If you know the answer but it is not based in the provided context, don't provide
     the answer, just state the answer is not in the context provided.
